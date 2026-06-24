@@ -1,0 +1,29 @@
+{
+  "name": "notes-express",
+  "version": "1.0.0",
+  "description": "- Node.js - npm     - env     - express     - nodemon     - mongoose     - jsonwebtoken - mongoDB (server) - mongosh (client) (test)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/app.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gris2004/notes-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gris2004/notes-express/issues"
+  },
+  "homepage": "https://github.com/Gris2004/notes-express#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.2"
+  }
+}
