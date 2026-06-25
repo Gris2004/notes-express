@@ -19,6 +19,29 @@ router.post('/user', async (req, res) => {
     }
 });
 
+router.post('/login', async (req, res) => {
+    try{
+        const user = await UserService.checkUser(req.body);
+
+        if(typeof user === 'string'){
+            return res.status(401).json({
+                message: user
+            });
+        }
+
+        res.status(200).json({
+            id: user.__id,
+            name: user.name
+        });
+
+    } catch(e){
+        res.status(500).json({
+            message: 'login error',
+            error: e.message
+        });
+    }
+});
+
 //notes
 //get a note
 router.get('/notes', async (req, res) => {

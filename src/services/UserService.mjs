@@ -3,7 +3,10 @@ import userModel from '../models/User.mjs';
 class UserService{
     async createUser(userData){
         try{
-            const user = await userModel.create(userData);
+            const user = await userModel.create({
+                name: userData.name
+            });
+
             return user;
         } catch (e) {
             console.error("error message: ", e);
