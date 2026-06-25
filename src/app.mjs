@@ -6,8 +6,8 @@ import dotenv from 'dotenv/config';
 //api
 const app = express();
 
-app.use('/api', router);
 app.use(express.json());
+app.use('/api', router);
 app.set('json spaces', 2);
 
 //host

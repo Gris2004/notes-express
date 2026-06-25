@@ -3,7 +3,7 @@ import noteModel from '../models/Note.mjs'
 class NoteService{
     async getAllNotes(){
         try{
-            const notes = noteModel.find();
+            const notes = await noteModel.find();
             return notes;
         } catch (e) {
             console.error("error message: ", e);
@@ -19,3 +19,5 @@ class NoteService{
         }
     }
 }
+
+export default new NoteService();
