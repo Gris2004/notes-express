@@ -14,8 +14,8 @@ class UserService{
         try{
             const user = await userModel.findOne(userData.user);
 
-            if(!user.password || !userData.password){
-                return "user and password required";
+            if(!user || !user.password || !userData.password){
+                return 'password and user required'
             }
 
             if(user.password !== userData.password){
